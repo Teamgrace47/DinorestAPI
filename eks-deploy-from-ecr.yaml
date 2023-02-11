@@ -6,15 +6,15 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: deno
+      app: deno-app
   template:
     metadata:
       labels:
-        app: deno
+        app: deno-app
     spec:
       containers:
-      - name: deno
-        image: 261193864225.dkr.ecr.us-east-1.amazonaws.com/my-docker-repo:latest
+      - name: my-deno
+        image: 261193864225.dkr.ecr.us-east-1.amazonaws.com/my-docker-repo
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
