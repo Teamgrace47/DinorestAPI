@@ -6,7 +6,7 @@ RUN apk add --no-cache curl && \
 WORKDIR /app
 COPY . .
 
-EXPOSE 8085
+EXPOSE 8080
 
 CMD ["deno", "run", "--allow-net", "index.ts"]
 
