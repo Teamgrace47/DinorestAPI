@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deno-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: deno
+  template:
+    metadata:
+      labels:
+        app: deno
+    spec:
+      containers:
+      - name: deno
+        image: deno:latest
+        ports:
+        - containerPort: 8080
+
