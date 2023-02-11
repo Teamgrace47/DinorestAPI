@@ -19,6 +19,8 @@ spec:
         - containerPort: 8080
 
  
+ # load balancer
+ ---
  apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
