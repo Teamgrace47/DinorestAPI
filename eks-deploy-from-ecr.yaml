@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deno-deployment
+  name: my-deno-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: deno
+      app: deno-app
   template:
     metadata:
       labels:
-        app: deno
+        app: deno-app
     spec:
       containers:
-      - name: deno
-        image: 211223789150.dkr.ecr.us-east-1.amazonaws.com/my-docker-repo:latest
+      - name: my-deno-app
+        image: 211223789150.dkr.ecr.us-east-1.amazonaws.com/my-docker-repo
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
