@@ -17,7 +17,7 @@ spec:
         image: 261193864225.dkr.ecr.us-east-1.amazonaws.com/my-docker-repo
         imagePullPolicy: Always
         ports:
-        - containerPort: 8085
+        - containerPort: 8080
 
  
  # service type loadbalancer       
@@ -34,7 +34,7 @@ spec:
   - name: http
     port: 80
     protocol: TCP
-    targetPort: 8085
+    targetPort: 8080
   type: LoadBalancer
   selector:
     app: deno
